@@ -1,5 +1,11 @@
 <resources>
+    <string name="hour">Hour</string>
+    <string name="hours">Hours</string>
+    <string name="minute">Minute</string>
+    <string name="minutes">Minutes</string>
+    <string name="and">And</string>
     <string name="app_name">What to Watch</string>
+    <string name="title_activity_main">What to Watch</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
@@ -14,4 +20,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="api_key">7f2323ddb4283932ca4972d14200c4f2</string>
+    <string name="read_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZjIzMjNkZGI0MjgzOTMy
+        Y2E0OTcyZDE0MjAwYzRmMiIsInN1YiI6IjVhNTc2NjBkYzNhMzY4NWVkNzAzYmE0OSIsInNjb3BlcyI6WyJhcGlfcmVh
+        ZCJdLCJ2ZXJzaW9uIjoxfQ.WUAMaHQtB4SqKFjQYL8GpmjbIJDYGWotdwS-UW2Vc3s</string>
+    <string name="waiting_msg">Waiting</string>
 </resources>

@@ -4,8 +4,8 @@
     <string name="minute">Minute</string>
     <string name="minutes">Minutes</string>
     <string name="and">And</string>
-    <string name="app_name">What to Watch</string>
-    <string name="title_activity_main">What to Watch</string>
+    <string name="app_name">Sofa Time</string>
+    <string name="title_activity_main">Sofa Time</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

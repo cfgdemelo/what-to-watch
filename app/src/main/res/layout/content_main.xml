@@ -27,5 +27,12 @@
         android:text="@string/waiting_msg"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/titleMovie"/>
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/timeMovie"
+        android:id="@+id/inputMovie"
+        android:inputType="number"
+        android:text="186734"/>
 
 </android.support.constraint.ConstraintLayout>

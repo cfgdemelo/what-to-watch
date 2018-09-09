@@ -1,9 +1,7 @@
 package br.com.wtw.cfgdemelo.whattowatch.view
 
-import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import br.com.wtw.cfgdemelo.whattowatch.api.ApiAccess
 import br.com.wtw.cfgdemelo.whattowatch.extensions.numbers.swap
 import br.com.wtw.cfgdemelo.whattowatch.R
 import br.com.wtw.cfgdemelo.whattowatch.viewModel.MainViewModel
@@ -19,22 +17,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        val viewModel = MainViewModel(this)
+        val viewModel = MainViewModel()
 
         fab.setOnClickListener {
-            viewModel.getMovieInfo()
+            viewModel.getMovieInfo(Integer.parseInt(inputMovie.text.toString()))
         }
-    }
 
-    fun setMovieTitle(movieTitle: String?) {
-        titleMovie?.text = movieTitle
-    }
-
-    fun setMovieTime(movieTime: Int?) {
-        timeMovie?.text = movieTime?.swap(this)
-    }
-
-    fun setMovieImg(movieImg: Uri) {
-        Picasso.get().load(movieImg).into(imgMovie)
+        viewModel.observable.subscribe {
+            titleMovie?.text = it.movieTitle
+            runOnUiThread {
+                Picasso.get().load(it.posterPath).into(imgMovie)
+            }
+            timeMovie?.text = it.movieTime?.swap(this)
+        }
     }
 }
